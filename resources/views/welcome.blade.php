@@ -9,7 +9,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        <link rel="stylesheet" href="/css/all.css">
         <!-- Styles -->
         <style>
             html, body {
@@ -66,6 +66,7 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+        <input type="text">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
@@ -91,5 +92,25 @@
                 </div>
             </div>
         </div>
+        <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
+
+          <!-- Modal Structure -->
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <h4>Modal Header</h4>
+              <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+          </div>
+                  
+        <script src="/js/app.js"></script>
+        <script src="/js/material.js"></script>
+        <script>
+            jQuery(document).ready(function($) {
+                 $('#modal1').modal();
+            });
+        </script>
     </body>
 </html>
